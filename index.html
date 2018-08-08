@@ -20,6 +20,9 @@
   <!-- Super Mario -->
   <a href="#"><div id="superMario" class="superMario"></div></a>
 
+  <!-- Goomba -->
+  <div id="goomba" class="goomba"></div>
+
 
 <!-- jQuery normal -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -31,6 +34,7 @@
 jQuery(document).ready(function(){
 
 marioTombe();
+goombaAvance();
 
 	// Disable scrolling
 	$("body").css("overflow", "hidden");
@@ -118,6 +122,17 @@ marioTombe();
 
     }
 
+
+    function goombaAvance(){
+
+
+      // Fait apparatre Goomba en Fade in
+      $("#goomba" ).css({'visibility':'visible', 'display':'block', 'opacity':'0'}).fadeTo( 2000 , 1, function() {});
+
+      // Goomba qui avance vers Mario
+      $("#goomba").css({'display':'block', 'opacity':'1'}).animate({left:"-=1200px"},5000);
+
+    }
 
 </script>
 
