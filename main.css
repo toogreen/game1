@@ -39,3 +39,14 @@ display: block;
 	display: all;
 	/*-webkit-transform: scale(0.5);*/
 }
+
+#goomba{
+	position: absolute;
+	background: url('../img/goomba.gif');
+	width: 256px;
+	height: 256px;
+	bottom: -2px;
+	right: 430px;
+	display: all;
+	-webkit-transform: scale(0.3);
+}
