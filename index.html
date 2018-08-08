@@ -2,8 +2,111 @@
 <html>
 <head>
 	<title>Super Game</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
+
+	<!-- Le styles -->
+    <link href="css/main.css" rel="stylesheet">
+
 </head>
 <body>
-	<div class="super-mario" id="#super-mario"></div>
+
+    <div class="mario-container">
+        
+        <!-- Sapin de noel -->
+        <a href="#"><div id="superMario" class="superMario"></div></a>
+
+    </div>
+
+<!-- jQuery normal -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<!-- Ajouté ça pour meilleures animations -->
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<script>
+jQuery(document).ready(function(){
+
+	// Disable scrolling
+	$("body").css("overflow", "hidden");
+
+	// loader la musique d'avance
+	var audioElement1 = document.createElement('audio');
+
+	audioElement1.setAttribute('src', 'sound/boing.mp3'); // Fonctionne juste sous webkit browsers
+
+	if ($.browser.mozilla || $.browser.opera) {
+	    audioElement1.setAttribute('src', 'sound/boing.ogv'); // Pour que ça joue partout
+	}
+
+	// Vu que la musique joue pas encore on definie une variable qui servira pour notre bouton play/pause plus tard
+	//var audioplaying = false;
+
+    // Si on clique sur mario
+    $("#superMario").click(function(){
+
+      	// On joue l'animation de mario qui saute
+      	marioSaute();
+
+    });
+
+
+}); // fin du jQuery
+
+
+ $(document).keydown(function(keyPressed) {
+   if (keyPressed.keyCode == 38) {
+     marioSaute();
+   }
+   if (keyPressed.keyCode == 37) {
+     marioRecule();
+   }
+   if (keyPressed.keyCode == 39) {
+     marioAvance();
+   }
+
+  });
+
+
+    function marioSaute(){
+
+
+
+        // Mario qui saute
+        $("#superMario").css({'display':'block', 'opacity':'1'}).animate({bottom:"+=100px"},400);
+
+        // Mario qui redescend
+        $("#superMario").css({'display':'block', 'opacity':'1'}).animate({bottom:"-=100px"},400);
+
+        // Boing sound effect
+      	audioElement1.play();
+
+    }
+
+    function marioRecule(){
+
+    	//mario image reverse
+    	$("#superMario").css({'transform':'scaleX(-1)', 'opacity':'1'});
+
+        // Mario qui recule
+        $("#superMario").css({'display':'block', 'opacity':'1'}).animate({left:"-=100px"},400);
+
+    }
+
+    function marioAvance(){
+
+    	//mario image reverse
+    	$("#superMario").css({'transform':'scaleX(1)', 'opacity':'1'});
+
+        // Mario qui avance
+        $("#superMario").css({'display':'block', 'opacity':'1'}).animate({left:"+=100px"},400);
+
+    }
+
+
+</script>
+
+
 </body>
 </html>

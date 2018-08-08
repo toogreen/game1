@@ -1,4 +1,19 @@
-#superMario{
-	postion: absolute;
-	background: url('../img/super-mario.jpg');
+.mario-container{
+  position: absolute;
+  bottom: 0px;
+  left: 35%;
+  width: 510px;
+  height: 523px;
+  opacity: 1;
 }
+
+
+	#superMario{
+		position: absolute;
+		background: url('../img/super-mario.png');
+		width: 100px;
+		height: 135px;
+		bottom: 0px;
+		display: all;
+
+	}
