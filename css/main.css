@@ -41,5 +41,5 @@ display: block;
 	height: 135px;
 	bottom: -10px;
 	display: all;
-	-webkit-transform: scale(0.5);
+	/*-webkit-transform: scale(0.5);*/
 }
