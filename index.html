@@ -30,6 +30,8 @@
 <script>
 jQuery(document).ready(function(){
 
+marioTombe();
+
 	// Disable scrolling
 	$("body").css("overflow", "hidden");
 
@@ -69,6 +71,18 @@ jQuery(document).ready(function(){
 	if ($.browser.mozilla || $.browser.opera) {
 	    audioElement1.setAttribute('src', 'sound/boing.ogv'); // Pour que ça joue partout
 	}
+
+
+    function marioTombe(){
+
+
+      // Mets Mario en haut et fait le tomber
+      //$("#superMario").css({'top':'0', 'display':'block', 'opacity':'1'}).animate({top:"+=725px"},1500);
+
+      // Fait apparatre Mario en Fade in
+      $("#superMario" ).css({'visibility':'visible', 'display':'block', 'opacity':'0'}).fadeTo( 2000 , 1, function() {});
+
+    }
 
     function marioSaute(){
 
