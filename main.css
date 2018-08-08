@@ -1,0 +1,41 @@
+
+body {
+margin:0!important;
+padding:0!important;
+border:0!important;
+display: block;
+}
+
+img {
+margin:0!important;
+padding:0!important;
+border:0!important;
+display: block;
+}
+
+/*Class to make images fit all screen*/
+.fit {
+  max-width: 99%;
+  max-height: 99%;
+}
+
+#bg-mario{
+	position: absolute;
+	background: url('../img/bg-mario.png');
+	display: block;
+	width: 2560px;
+	height: 1050px;
+	-ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari */
+    transform: scale(1); /* Standard syntax */
+}
+
+#superMario{
+	position: absolute;
+	background: url('../img/super-mario.png');
+	width: 100px;
+	height: 135px;
+	bottom: 87px;
+	display: all;
+	/*-webkit-transform: scale(0.5);*/
+}
