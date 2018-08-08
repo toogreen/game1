@@ -31,17 +31,6 @@ jQuery(document).ready(function(){
 	// Disable scrolling
 	$("body").css("overflow", "hidden");
 
-	// loader la musique d'avance
-	var audioElement1 = document.createElement('audio');
-
-	audioElement1.setAttribute('src', 'sound/boing.mp3'); // Fonctionne juste sous webkit browsers
-
-	if ($.browser.mozilla || $.browser.opera) {
-	    audioElement1.setAttribute('src', 'sound/boing.ogv'); // Pour que ça joue partout
-	}
-
-	// Vu que la musique joue pas encore on definie une variable qui servira pour notre bouton play/pause plus tard
-	//var audioplaying = false;
 
     // Si on clique sur mario
     $("#superMario").click(function(){
@@ -56,31 +45,40 @@ jQuery(document).ready(function(){
 
 
  $(document).keydown(function(keyPressed) {
-   if (keyPressed.keyCode == 38) {
+
+   if (keyPressed.keyCode == 38) { // If we push the UP key
      marioSaute();
    }
-   if (keyPressed.keyCode == 37) {
+   if (keyPressed.keyCode == 37) { // If we push the LEFT key
      marioRecule();
    }
-   if (keyPressed.keyCode == 39) {
+   if (keyPressed.keyCode == 39) { // If we push the RIGHT key
      marioAvance();
    }
 
   });
 
 
-    function marioSaute(){
+	// loader la musique d'avance
+	var audioElement1 = document.createElement('audio');
 
+	audioElement1.setAttribute('src', 'sound/boing.mp3'); // Fonctionne juste sous webkit browsers
+
+	if ($.browser.mozilla || $.browser.opera) {
+	    audioElement1.setAttribute('src', 'sound/boing.ogv'); // Pour que ça joue partout
+	}
+
+    function marioSaute(){
 
 
         // Mario qui saute
         $("#superMario").css({'display':'block', 'opacity':'1'}).animate({bottom:"+=100px"},400);
 
-        // Mario qui redescend
-        $("#superMario").css({'display':'block', 'opacity':'1'}).animate({bottom:"-=100px"},400);
-
         // Boing sound effect
       	audioElement1.play();
+
+        // Mario qui redescend
+        $("#superMario").css({'display':'block', 'opacity':'1'}).animate({bottom:"-=100px"},400);
 
     }
 
