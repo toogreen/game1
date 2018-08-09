@@ -58,21 +58,21 @@ display: block;
 }
 
 #superMario{
-	position: absolute;
+	position: relative;
 	background: url('../img/super-mario-smaller.png');
 	height: 75px;
 	width: 56px;
-	bottom: 132px;
+	bottom:440px;
 	left: 2%;
 }
 
 #goomba{
-	position: absolute;
+	position: relative;
 	background: url('../img/goomba.gif');
 	width: 256px;
 	height: 256px;
-	bottom: 30px;
-	right: 400px;
-	display: all;
+	bottom: 262px;
+/*	right: 40px;*/
+	left: 40%;
 	-webkit-transform: scale(0.2);
 }

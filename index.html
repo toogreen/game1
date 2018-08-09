@@ -18,11 +18,13 @@
 	  <!-- Super Mario BG -->
 	  <div id="bg-mario" class="bg-mario"></div>
 
+	  <!-- Goomba -->
+	  <div id="goomba" class="goomba"></div>
+
 	  <!-- Super Mario -->
 	  <a href="#"><div id="superMario" class="superMario"></div></a>
 
-	  <!-- Goomba -->
-	  <div id="goomba" class="goomba"></div>
+
 
 	</div><!-- Main container ends -->
       
@@ -109,21 +111,27 @@ goombaAvance();
 
     function marioRecule(){
 
-    	//mario image reverse
+      //mario image reverse
   	  $("#superMario").css({'transform':'scaleX(-1)', 'opacity':'1'});
 
       // Mario qui recule
-      $("#superMario").css({'display':'block', 'opacity':'1'}).animate({left:"-=100px"},400);
+      $("#superMario").css({'display':'block', 'opacity':'1'}).animate({left:"-=50px"},400);
+
+      // Background se deplace
+      $("#bg-mario").css({'display':'block', 'opacity':'1'}).animate({left:"+=50px"},400);
 
     }
 
     function marioAvance(){
 
-    	//mario image reverse
-    	$("#superMario").css({'transform':'scaleX(1)', 'opacity':'1'});
+      //mario image reverse
+      $("#superMario").css({'transform':'scaleX(1)', 'opacity':'1'});
 
       // Mario qui avance
-      $("#superMario").css({'display':'block', 'opacity':'1'}).animate({left:"+=100px"},400);
+      $("#superMario").css({'display':'block', 'opacity':'1'}).animate({left:"+=50px"},400);
+
+      // Background se deplace
+      $("#bg-mario").css({'display':'block', 'opacity':'1'}).animate({left:"-=50px"},400);
 
     }
 
