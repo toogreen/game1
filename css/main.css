@@ -1,9 +1,14 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
 
 body {
 margin:0!important;
 padding:0!important;
 border:0!important;
 display: block;
+background-color: black;
 }
 
 img {
@@ -13,6 +18,21 @@ border:0!important;
 display: block;
 }
 
+
+#main-container{
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  opacity: 1;
+  z-index: -1000;
+  align-content: center;
+  align-self: center;
+  vertical-align: center;
+  text-align: center;
+  alignment-baseline: middle;
+}
+
+
 /*Class to make images fit all screen*/
 .fit {
   max-width: 99%;
@@ -20,20 +40,39 @@ display: block;
 }
 
 #bg-mario{
-	position: absolute;
+	position: relative;
 	background: url('../img/bg-mario.png');
-	display: block;
-	width: 2560px;
-	height: 1050px;
-	width: 100%;
+
+	/*Original size*/
+/*	width: 2560px;
+	height: 1050px;*/
+
+	/* Full height */
+    height: 600px; 
+    width: auto;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #superMario{
 	position: absolute;
-	background: url('../img/super-mario.png');
-	width: 100px;
-	height: 135px;
-	bottom: 87px;
+	background: url('../img/super-mario-smaller.png');
+	height: 75px;
+	width: 56px;
+	bottom: 132px;
+	left: 2%;
+}
+
+#goomba{
+	position: absolute;
+	background: url('../img/goomba.gif');
+	width: 256px;
+	height: 256px;
+	bottom: 30px;
+	right: 400px;
 	display: all;
-	/*-webkit-transform: scale(0.5);*/
+	-webkit-transform: scale(0.2);
 }
